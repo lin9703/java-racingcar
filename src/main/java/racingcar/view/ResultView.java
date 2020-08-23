@@ -10,7 +10,7 @@ public class ResultView {
         System.out.println("\n실행 결과");
     }
 
-    public void printResult(RacingCars racingCars) {
+    public static void printResult(RacingCars racingCars) {
         racingCars.getCarList()
                 .forEach(car -> {
                     int step = car.getStep();
@@ -19,7 +19,7 @@ public class ResultView {
         System.out.println();
     }
 
-    public void printWinners(List<String> winners) {
+    public static void printWinners(List<String> winners) {
         StringBuilder sb = new StringBuilder();
         winners.forEach(winner -> sb.append(winner).append(", "));
         sb.setLength(sb.length() - 2);

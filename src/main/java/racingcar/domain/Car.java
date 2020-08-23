@@ -2,8 +2,8 @@ package racingcar.domain;
 
 public class Car {
     private final String name;
-    private int step;
     private final MoveStrategy moveStrategy;
+    private int step;
 
     public Car(String name, int step, MoveStrategy moveStrategy) {
         this.name = name;

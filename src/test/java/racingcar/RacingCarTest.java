@@ -33,7 +33,7 @@ public class RacingCarTest {
     void 이름_검증_5자_넘을_때() {
         ValidationUtil validationUtil = new ValidationUtil();
         assertThatThrownBy(() -> {
-            validationUtil.validateInputName(new String[]{"ccccccc", "a", "abc"});
+            validationUtil.validateExcessInputName(new String[]{"ccccccc", "a", "abc"});
         }).isInstanceOf(IllegalArgumentException.class);
     }
 
