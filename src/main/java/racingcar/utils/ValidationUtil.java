@@ -1,4 +1,4 @@
-package racingcar.domain;
+package racingcar.utils;
 
 import java.util.Arrays;
 
@@ -12,8 +12,8 @@ public class ValidationUtil {
 
     public void validateNullInputName(String[] carNameList) {
         if (Arrays.stream(carNameList)
-                .anyMatch(name -> name.length() < 1)) {
-            throw new IllegalArgumentException("자동차 이름은 0글자일 수 없습니다.");
+                .anyMatch(name -> name.length() < 1 || name == null)) {
+            throw new NullPointerException("자동차 이름은 0글자일 수 없습니다.");
         }
     }
 

@@ -2,7 +2,7 @@ package racingcar;
 
 import org.junit.jupiter.api.Test;
 import racingcar.domain.RacingCars;
-import racingcar.domain.ValidationUtil;
+import racingcar.utils.ValidationUtil;
 
 import java.util.Arrays;
 
@@ -35,6 +35,15 @@ public class RacingCarTest {
         assertThatThrownBy(() -> {
             validationUtil.validateExcessInputName(new String[]{"ccccccc", "a", "abc"});
         }).isInstanceOf(IllegalArgumentException.class);
+    }
+
+    @Test
+    void 이름_검증_0자_때() {
+        ValidationUtil validationUtil = new ValidationUtil();
+        assertThatThrownBy(() -> {
+            validationUtil.validateNullInputName(new String[]{"", " "});
+        }).isInstanceOf(NullPointerException.class)
+        .hasMessage("자동차 이름은 0글자일 수 없습니다.");
     }
 
     @Test
