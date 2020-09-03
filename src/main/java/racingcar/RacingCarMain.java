@@ -2,7 +2,7 @@ package racingcar;
 
 import racingcar.domain.RacingCars;
 import racingcar.domain.StraightMove;
-import racingcar.domain.ValidationUtil;
+import racingcar.utils.ValidationUtil;
 
 import static racingcar.view.InputView.getCarNameList;
 import static racingcar.view.InputView.getMoveCount;
